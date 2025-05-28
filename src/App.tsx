@@ -1,11 +1,7 @@
+import MainLayout from "./components/layout/MainLayout";
+
 function App() {
-  return (
-    <div>
-      <h1 className="text-4xl">
-        PH University Management Application
-      </h1>
-    </div>
-  );
+  return <MainLayout />;
 }
 
 export default App;
