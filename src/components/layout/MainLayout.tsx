@@ -21,7 +21,7 @@ const items = [
 
 const MainLayout = () => {
   return (
-    <Layout>
+    <Layout style={{ minHeight: "100vh" }}>
       <Sider
         breakpoint="lg"
         collapsedWidth="0"
