@@ -1,44 +1,45 @@
 import { Layout, Menu, type MenuProps } from "antd";
+import { NavLink, Outlet } from "react-router-dom";
 const { Header, Content, Footer, Sider } = Layout;
 
 const items: MenuProps["items"] = [
   {
-    key: "1",
-    label: "Dashboard",
-    children: [
-      {
-        key: "1-1",
-        label: "Overview",
-      },
-      {
-        key: "1-2",
-        label: "Statistics",
-      },
-      {
-        key: "1-3",
-        label: "Reports",
-      },
-    ],
+    key: "Dashboard",
+    label: <NavLink to="/admin/dashboard">Dashboard</NavLink>,
+    // children: [
+    //   {
+    //     key: "Overview",
+    //     label: "Overview",
+    //   },
+    //   {
+    //     key: "Statistics",
+    //     label: "Statistics",
+    //   },
+    //   {
+    //     key: "Reports",
+    //     label: "Reports",
+    //   },
+    // ],
   },
   {
-    key: "2",
+    key: "Profile",
     label: "Profile",
   },
   {
-    key: "3",
+    key: "User Management",
     label: "User Management",
     children: [
       {
-        key: "3-1",
-        label: "Add User",
+        key: "Create Admin",
+        label: <NavLink to="/admin/create-admin">Create Admin</NavLink>,
       },
       {
-        key: "3-2",
-        label: "Edit User",
+        key: "Create Faculty",
+        label: <NavLink to="/admin/create-faculty">Create Faculty</NavLink>,
       },
       {
-        key: "3-3",
-        label: "Delete User",
+        key: "Create Student",
+        label: <NavLink to="/admin/create-student">Create Student</NavLink>,
       },
     ],
   },
@@ -86,7 +87,7 @@ const MainLayout = () => {
               minHeight: 360,
             }}
           >
-            The main content goes here. You can add your components or pages.
+            <Outlet />
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
