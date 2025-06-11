@@ -1,5 +1,3 @@
-
-
 import { Layout, Menu, type MenuProps } from "antd";
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -59,7 +57,19 @@ const MainLayout = () => {
           console.log(collapsed, type);
         }}
       >
-        <div className="demo-logo-vertical" ><div style={{ color: "white", padding: "16px" }}>Logo</div></div>
+        <div className="demo-logo-vertical">
+          <div
+            style={{
+              color: "white",
+              height: "4rem",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            PH Uni
+          </div>
+        </div>
         <Menu
           theme="dark"
           mode="inline"
