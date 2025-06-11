@@ -1,23 +1,50 @@
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
 
-import { Layout, Menu } from "antd";
-import { createElement } from "react";
+
+import { Layout, Menu, type MenuProps } from "antd";
 const { Header, Content, Footer, Sider } = Layout;
 
-const items = [
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  UserOutlined,
-].map((icon, index) => ({
-  key: String(index + 1),
-  icon: createElement(icon),
-  label: `nav ${index + 1}`,
-}));
+const items: MenuProps["items"] = [
+  {
+    key: "1",
+    label: "Dashboard",
+    children: [
+      {
+        key: "1-1",
+        label: "Overview",
+      },
+      {
+        key: "1-2",
+        label: "Statistics",
+      },
+      {
+        key: "1-3",
+        label: "Reports",
+      },
+    ],
+  },
+  {
+    key: "2",
+    label: "Profile",
+  },
+  {
+    key: "3",
+    label: "User Management",
+    children: [
+      {
+        key: "3-1",
+        label: "Add User",
+      },
+      {
+        key: "3-2",
+        label: "Edit User",
+      },
+      {
+        key: "3-3",
+        label: "Delete User",
+      },
+    ],
+  },
+];
 
 const MainLayout = () => {
   return (
@@ -32,7 +59,7 @@ const MainLayout = () => {
           console.log(collapsed, type);
         }}
       >
-        <div className="demo-logo-vertical" />
+        <div className="demo-logo-vertical" ><div style={{ color: "white", padding: "16px" }}>Logo</div></div>
         <Menu
           theme="dark"
           mode="inline"
