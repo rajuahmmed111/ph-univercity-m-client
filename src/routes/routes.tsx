@@ -1,9 +1,5 @@
 import App from "@/App";
 import About from "@/pages/About";
-import AdminDashboard from "@/pages/admin/AdminDashboard";
-import CreateAdmin from "@/pages/admin/CreateAdmin";
-import CreateFaculty from "@/pages/admin/CreateFaculty";
-import CreateStudent from "@/pages/admin/CreateStudent";
 import Login from "@/pages/Login";
 import SignUp from "@/pages/SignUp";
 import { Contact } from "lucide-react";
