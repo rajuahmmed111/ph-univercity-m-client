@@ -1,7 +1,7 @@
 
 const CreateAdmin = () => {
   return (
-    <div>CreateAdmin component</div>
+    <div>CreateAdmin</div>
   )
 }
 
