@@ -1,22 +1,81 @@
 import AdminDashboard from "@/pages/admin/AdminDashboard";
+import CreateAdmin from "@/pages/admin/CreateAdmin";
 import CreateFaculty from "@/pages/admin/CreateFaculty";
 import CreateStudent from "@/pages/admin/CreateStudent";
+import type { RouteObject } from "react-router-dom";
 
-export const adminPaths =  [
+const adminPaths = [
+  {
+    path: "/admin/dashboard",
+    element: <AdminDashboard />,
+  },
+  {
+    name: "User Management",
+    children: [
       {
-        index: true,
-        element: <AdminDashboard />,
+        name: "Create Admin",
+        path: "/admin/create-admin",
+        element: <CreateAdmin />,
       },
       {
-        path: "dashboard",
-        element: <AdminDashboard />,
-      },
-      {
-        path: "create-student",
+        name: "Create Student",
+        path: "/admin/create-student",
         element: <CreateStudent />,
       },
       {
-        path: "create-faculty",
+        name: "Create Faculty",
+        path: "/admin/create-faculty",
         element: <CreateFaculty />,
       },
-    ]
+    ],
+  },
+  {
+    name: "Course Management",
+    children: [
+      {
+        name: "Offer Course",
+        path: "/admin/offer-course",
+        element: <CreateFaculty />,
+      },
+    ],
+  },
+];
+
+export const adminRoutes = adminPaths.reduce<RouteObject[]>((acc, item) => {
+  if (item.path && item.element) {
+    acc.push({
+      path: item.path,
+      element: item.element,
+    });
+  }
+
+  if (item.children) {
+    item.children.forEach((child) => {
+      acc.push({
+        path: child.path,
+        element: child.element,
+      });
+    });
+  }
+
+  return acc;
+}, []);
+
+// export const adminPaths = [
+//   {
+//     index: true,
+//     element: <AdminDashboard />,
+//   },
+//   {
+//     path: "dashboard",
+//     element: <AdminDashboard />,
+//   },
+//   {
+//     path: "create-student",
+//     element: <CreateStudent />,
+//   },
+//   {
+//     path: "create-faculty",
+//     element: <CreateFaculty />,
+//   },
+// ];
