@@ -55,7 +55,7 @@ const MainLayout = () => {
           console.log(broken);
         }}
         onCollapse={(collapsed, type) => {
-          console.log(collapsed, type);
+          // console.log(collapsed, type);
         }}
       >
         <div className="demo-logo-vertical">
