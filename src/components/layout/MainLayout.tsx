@@ -54,6 +54,7 @@ const MainLayout = () => {
         onBreakpoint={(broken) => {
           console.log(broken);
         }}
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         onCollapse={(collapsed, type) => {
           // console.log(collapsed, type);
         }}
