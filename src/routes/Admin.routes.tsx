@@ -6,7 +6,7 @@ import type { RouteObject } from "react-router-dom";
 
 const adminPaths = [
   {
-    path: "/admin/dashboard",
+    path: "dashboard",
     element: <AdminDashboard />,
   },
   {
@@ -14,17 +14,17 @@ const adminPaths = [
     children: [
       {
         name: "Create Admin",
-        path: "/admin/create-admin",
+        path: "create-admin",
         element: <CreateAdmin />,
       },
       {
         name: "Create Student",
-        path: "/admin/create-student",
+        path: "create-student",
         element: <CreateStudent />,
       },
       {
         name: "Create Faculty",
-        path: "/admin/create-faculty",
+        path: "create-faculty",
         element: <CreateFaculty />,
       },
     ],
@@ -34,7 +34,7 @@ const adminPaths = [
     children: [
       {
         name: "Offer Course",
-        path: "/admin/offer-course",
+        path: "offer-course",
         element: <CreateFaculty />,
       },
     ],
