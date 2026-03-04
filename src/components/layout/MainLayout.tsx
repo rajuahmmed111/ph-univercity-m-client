@@ -12,10 +12,6 @@ const items: MenuProps["items"] = [
     //     label: "Overview",
     //   },
     //   {
-    //     key: "Statistics",
-    //     label: "Statistics",
-    //   },
-    //   {
     //     key: "Reports",
     //     label: "Reports",
     //   },
