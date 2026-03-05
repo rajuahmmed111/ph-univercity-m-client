@@ -1,7 +1,7 @@
 
 const CreateFaculty = () => {
   return (
-    <div>Create Faculty</div>
+    <div>This is create faculty page</div>
   )
 }
 
