@@ -4,6 +4,7 @@ import CreateFaculty from "@/pages/admin/CreateFaculty";
 import CreateStudent from "@/pages/admin/CreateStudent";
 import { NavLink, type RouteObject } from "react-router-dom";
 
+// admin paths
 const adminPaths = [
   {
     path: "dashboard",
