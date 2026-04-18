@@ -65,7 +65,7 @@ export const adminSidebarItems = adminPaths.reduce<any[]>((acc, item) => {
   return acc;
 }, []);
 
-// admin route
+// admin routes for
 export const adminRoutes = adminPaths.reduce<RouteObject[]>((acc, item) => {
   if (item.path && item.element) {
     acc.push({
